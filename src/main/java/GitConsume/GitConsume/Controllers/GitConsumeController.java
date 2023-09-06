@@ -2,10 +2,7 @@ package GitConsume.GitConsume.Controllers;
 
 import GitConsume.GitConsume.Services.GitHubRepositoryServiceImpl;
 import org.springframework.http.HttpHeaders;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class GitConsumeController {
@@ -16,7 +13,7 @@ public class GitConsumeController {
         this.gitHubRepositoryService = gitHubRepositoryService;
     }
 
-    @PostMapping("/getUserRepository")
+    @GetMapping("/getUserRepository")
     public Object getUserRepository(@RequestParam(value = "gitHubUser", required = false) String gitHubUser, @RequestHeader(HttpHeaders.ACCEPT) String acceptHeader) {
 
 
