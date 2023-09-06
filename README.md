@@ -1,6 +1,6 @@
 # GitApiConsume-REST
 
-REST version of application, that consumes Github Api. 
+REST version of application, that consumes Github Api. The application was made with Java and SpringBoot. 
 In return of Get request with header with parameter „Accept: application/xml” application returns 404 error with message: "XML is not acceptable". 
 Parameter „Accept: application/json” grants access to api. 
 When user in request parameter pass username, that does not exist in GitHub or will send empty value, api will return 406 error.
